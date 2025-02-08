@@ -22,7 +22,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 
 <p align="center">
   <a href="https://github.com/Mrhanstz">
-    <img src="http://readme-typing-svg.herokuapp.com?color=blue&center=true&vCenter=true&multiline=false&lines=VORTEX-XMD+MultiDevice;Developed+by+Sir+VORTEX;Give+star+and+fork+this+Repo+bro+🌟" alt="sirVORTEXReadme">
+    <img src="http://readme-typing-svg.herokuapp.com?color=blue&center=true&vCenter=true&multiline=false&lines=VORTEX-XMD+MultiDevice;Developed+by+Mr-HansTz;Give+star+and+fork+this+Repo+bro+🌟" alt="Mrhanstzeadme">
   </a>
 </p>
 
@@ -35,7 +35,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 ***
 
 <p align="center">
-  <a href="https://github.com/Mrhanstz"><img title="Developer" src="https://img.shields.io/badge/Author-Sir%20VORTEX-397604.svg?style=for-the-badge&logo=github" /></a>
+  <a href="https://github.com/Mrhanstz"><img title="Developer" src="https://img.shields.io/badge/Author-Mr%20MrhansTz0-397604.svg?style=for-the-badge&logo=github" /></a>
 </p>
 
 <div align="center">
