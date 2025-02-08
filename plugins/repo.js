@@ -40,7 +40,7 @@ Effortlessly elevate your WhatsApp experience with our cutting-edge bot technolo
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://i.imgur.com/PEZ5QL2.jpeg` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: message,
                 contextInfo: {
                     mentionedJid: [m.sender],

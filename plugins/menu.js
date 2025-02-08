@@ -47,7 +47,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -122,7 +122,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -201,7 +201,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -267,7 +267,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -327,7 +327,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -380,7 +380,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-               image: { url: `https://imgur.com/a/brpeyfS` },
+               image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -440,7 +440,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -490,7 +490,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -560,7 +560,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
@@ -611,7 +611,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://imgur.com/a/brpeyfS` },
+                image: { url: `https://ibb.co/8nBcgzjc` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
