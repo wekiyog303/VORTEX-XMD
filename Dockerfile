@@ -11,6 +11,8 @@ RUN apt-get update && \
 COPY package.json .
 
 RUN npm install && npm install -g qrcode-terminal pm2
+RUN npm install dotenv
+
 
 COPY . .
 
