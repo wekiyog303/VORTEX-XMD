@@ -40,7 +40,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 
 <div align="center">
   
-[![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-FF00F8?style=for-the-badge&logo=whatsapp)](HansTz~Yxwj3Zoa#N7Mti4kjHnOwhF8PLajt4KvJt_dNPPAeNjgLaszm3po)
+[![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-FF00F8?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029Vb4a985InlqSS0l3ro3c#N7Mti4kjHnOwhF8PLajt4KvJt_dNPPAeNjgLaszm3po)
 </div>
 
  <p align="center"><img src="https://profile-counter.glitch.me/{VORTEX-XMD}/count.svg" alt="Mrhanstz :: Visitor's Count" old_src="https://profile-counter.glitch.me/{HansTz}/count.svg" /></p>
@@ -100,8 +100,7 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 <p style="text-align: center; font-size: 1.2em;">
 
 
-<p align="center">
-<a href='https://dashboard.heroku.com/new?template=https://github.com/Mrhanstz/VORTEX-XMD/tree/main' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-heroku ‎ deploy-FF004D?style=for-the-badge&logo=heroku&logoColor=white'/< width=150 height=28/p></a>
+***[![Deploy on heroku](https://www.herokucdn.com/deploy/button.svg)](https://vortexxmd.vercel.app/Hans.html)***
 
 ----------
 
@@ -176,7 +175,7 @@ That's all bot connected
   
 <p align="center">
 <a href='https://dashboard.render.com/web/new' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-Render deploy-black?style=for-the-badge&logo=render&logoColot=white'/< width=150 height=28/p></a>
---------
+
 
 <h4 align="center">6. Hugging Face</h4>
 <p style="text-align: center; font-size: 1.2em;">
@@ -292,7 +291,7 @@ jobs:
 
 Stay connected with the latest updates and community by joining our official WhatsApp group and channel. You can also contact the owner directly.
 
-[![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-25D366?style=for-the-badge&logo=whatsapp)](HansTz~Yxwj3Zoa#N7Mti4kjHnOwhF8PLajt4KvJt_dNPPAeNjgLaszm3po)
+[![WhatsApp Channel](https://img.shields.io/badge/Join-WhatsApp%20Channel-25D366?style=for-the-badge&logo=whatsapp)](https://whatsapp.com/channel/0029Vb4a985InlqSS0l3ro3c#N7Mti4kjHnOwhF8PLajt4KvJt_dNPPAeNjgLaszm3po)
 
 ***
 
