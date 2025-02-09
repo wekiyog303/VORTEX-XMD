@@ -100,7 +100,7 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 <p style="text-align: center; font-size: 1.2em;">
 
 
-***[![Deploy on heroku](https://www.herokucdn.com/deploy/button.svg)](https://vortexxmd.vercel.app/Hans.html)***
+***[![Deploy on heroku](https://www.herokucdn.com/deploy/button.svg)](https://vortex-hanstz.vercel.app)***
 
 ----------
 
