@@ -1,8 +1,8 @@
 {
   "name": "Vortex-xmd",
-  "description": "Javascript WhatsApp bot made by HansTz",
+  "description": "Made By Hans WhatsApp bot made by HansTz",
   "keywords": ["Vortex-xmd"],
-  "repository": "https://github.com/Mrhanstz/VORTEX-XMD",
+  "repository": "https://vortex-hanstz.vercel.app",
   "success_url": "/",
 
     "stack": "container",
