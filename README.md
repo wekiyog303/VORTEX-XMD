@@ -36,8 +36,8 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 
 ---
 
-<p align="center">
-  <img src="https://files.catbox.moe/fj4asx.mp4"/>
+  <!-- Recent Commits GIF Animation -->
+  <img src="https://files.catbox.moe/k3gfrv.gif" alt="GitHub Activity Animation" width="800" style="border-radius: 10px;">
 </p>
 
 <p align="center">
