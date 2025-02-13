@@ -41,7 +41,7 @@
 
 Start by forking this repository to your own GitHub account. Click the button below to fork:
 
-  <a href="https://github.com/Mrhanstz/VORTEX-XMD/fork"><button style="background-color: blue; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Fork VORTEX-XMD</button></a>
+  <a href="https://github.com/Mrhanstz/VORTEX-XMD/fork"><button style="background-color: #4CAF50; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Fork VORTEX-XMD</button></a>
 
 ### 2. Get Session ID 
 
@@ -50,21 +50,21 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 > **1️⃣Pair Code (Session ID)**
 
 <a href='https://vortex-xmd-session-site.onrender.com/' target="_blank">
-  <button style="background-color: orange; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Get Pairing Code</button>
+  <button style="background-color: #FF5733; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Get Pairing Code</button>
 </a>
 <br> 
 
 > **2️⃣Pair Code (Session ID)**
 
 <a href='https://vortex-xmd-session-site.onrender.com/' target="_blank">
-  <button style="background-color: darkpink; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Get Pairing Code</button>
+  <button style="background-color: #33C1FF; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Get Pairing Code</button>
 </a>
 <br> 
 
 > **3️⃣qr Code (Session ID)**
 
 <a href='https://vortex-xmd-session-site.onrender.com/qr' target="_blank">
-  <button style="background-color: cyan; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Get Pairing Code</button>
+  <button style="background-color: #FF5B00; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Get Pairing Code</button>
 </a>
 <br> 
 
@@ -77,7 +77,7 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 <h4 align="center">1. Heroku</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://vortex-hanstz.vercel.app" target="_blank">
-    <button style="background-color: green; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Heroku</button>
+    <button style="background-color: #28a745; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Heroku</button>
   </a>
 </p>
 
@@ -86,7 +86,7 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 <h4 align="center">2. TalkDrove Free</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://host.talkdrove.com/" target="_blank">
-    <button style="background-color: #6971FF; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on TalkDrove</button>
+    <button style="background-color: #008CFF; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on TalkDrove</button>
   </a>
 </p>
 
@@ -99,11 +99,10 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 
 --------------
 
-
 <h4 align="center">3. Koyeb</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href='https://app.koyeb.com/services/deploy?type=git&repository=Mrhanstz/VORTEX-XMD&ports=3000' target="_blank">
-    <button style="background-color: #FF009D; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Koyeb</button>
+    <button style="background-color: #6610f2; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Koyeb</button>
   </a>
 </p>
 
@@ -112,7 +111,7 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 <h4 align="center">4. Railway</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://railway.app/new" target="_blank">
-    <button style="background-color: #FF8700; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Railway</button>
+    <button style="background-color: #17a2b8; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Railway</button>
   </a>
 </p>
 
@@ -121,14 +120,14 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 <h4 align="center">5. Render</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href='https://dashboard.render.com/web/new' target="_blank">
-    <button style="background-color: #000000; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Render</button>
+    <button style="background-color: #28a745; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Render</button>
   </a>
 </p>
 
 <h4 align="center">6. Hugging Face</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href='https://app.netlify.com/' target="_blank">
-    <button style="background-color: #CC00FF; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Hugging Face</button>
+    <button style="background-color: #0077B5; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Hugging Face</button>
   </a> 
 </p>
 
@@ -145,6 +144,6 @@ You will need a session ID to run the VORTEX-XMD. Click the button below to obta
 <h4 align="center">7. Replit</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://replit.com/~" target="_blank">
-    <button style="background-color: #1976D2; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Replit</button>
+    <button style="background-color: #6610f2; color: white; padding: 10px 20px; font-size: 16px; border-radius: 5px;">Deploy on Replit</button>
   </a>
 </p>
