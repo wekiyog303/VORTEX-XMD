@@ -35,11 +35,14 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 </p>
 
 ---
-
 <p align="center">
-  <img src="https://files.catbox.moe/lvvpzw.jpeg"/>
+  <a href="https://whatsapp.com/channel/0029Vb4a985InlqSS0l3ro3c" target="_blank">
+    <video width="320" height="240" controls>
+      <source src="https://files.catbox.moe/fj4asx.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </a>
 </p>
-
 <p align="center">
   <img src="https://i.imgur.com/LyHic3i.gif"/>
 </p>
