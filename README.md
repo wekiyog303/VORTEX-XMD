@@ -204,7 +204,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
   Don't Copy Without Permission
 </p>
 
-<pre>Thank you For Silva Md Bot</pre>
+<pre>Made By HansTz Tech From Tanzania 🇹🇿</pre>
 
 ---
 
