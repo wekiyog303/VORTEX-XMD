@@ -111,23 +111,37 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 
 ---
 
-<h4 align="center">1. Heroku</h4>
+<h4 align="center">1. Heroku Safe 💯</h4>
 <p align="center">
   <a href="https://vortex-hanstz.vercel.app">
     <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy on Heroku">
   </a>
 </p>
 
-<h4 align="center">2. TalkDrove Free</h4>
-<p align="center">
-  <a href='https://talkdrove.com/share-bot/66' target="_blank">
-    <img alt='TalkDrove Deploy' src='https://img.shields.io/badge/-TalkDrove%20Deploy-6971FF?style=for-the-badge&logo=Github&logoColor=white'/>
-  </a>
-</p>
 
 <details>
-  <summary>HOW TO DEPLOY ON TALKDROVE</summary>
-  <p>Follow the steps mentioned above for easy deployment.</p>
+  <summary>CHEK THE OUR HANS MD</summary>
+  <p>HANS-XMD ON PANNEL DOWNLOAD FILE AND ENJOY 
+  Guys HANS XMD Is ready on Media Fire 🔥.... Download and enjoy....
+
+Download File here on Media Fire
+
+https://www.mediafire.com/file/9knrpef1zhc4wzp/𝙃𝘼𝙉𝙎-𝙓𝙈𝘿-𝙑1.zip/file
+
+Create account on pannel here 
+
+https://bot-hosting.net/?aff=1308000667230666802
+
+Follow My channel Hire for Updates 
+
+https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31
+
+Video on YouTube How to deploy here
+For free HANS XMD  
+
+https://youtu.be/4DIE4y6ugig?si=Xnyp0aVqQQgiUZo9
+
+</p>
 </details>
 
 <h4 align="center">3. Koyeb</h4>
@@ -151,16 +165,33 @@ Dont forget to fork 🍴 & star 🌟 repo😇
   </a>
 </p>
 
-<h4 align="center">6. Hugging Face</h4>
-<p align="center">
-  <a href='https://app.netlify.com/'>
-    <img alt='Netlify Deploy' src='https://img.shields.io/badge/-Netlify%20Deploy-CC00FF?style=for-the-badge&logo=huggingface&logoColor=white'/>
-  </a>
-</p>
-
 <details>
-  <summary>HOW TO DEPLOY ON HUGGING FACE</summary>
-  <p>Steps and specs mentioned above.</p>
+  <summary>HANS-MD ON HEROKU BOT IS SAFE 💯</summary>
+  <p>
+2 HANS-MD NORMAL BOT DEPLOY ON HEROKU
+
+you can now deploy Hans-Md safe on WhatsApp account and Heroku (no banning anymore)
+
+*Fixed*
+
+* Lyrics download 
+* Gpt search 
+* Autoreact status
+* Autoreact 
+* Audio reply 
+* Auto reply 
+* Antcall 
+* Broadcast
+ .  New Log added 
+
+Star fork and deploy HANS MD,,,,as you wait for more updates 
+
+*Bot repo*:https://github.com/mrhanstz/HANS-MD
+
+
+Support https://whatsapp.com/channel/0029VasiOoR3bbUw5aV4qB31
+
+DON'T FOR GET TO FOLLOW OUR CHANNNEL</p>
 </details>
 
 <h4 align="center">7. Replit</h4>
