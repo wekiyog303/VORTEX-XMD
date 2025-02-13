@@ -2,48 +2,38 @@
   <h1 align="center">💫 Vᴏʀᴛᴇx xᴍᴅ 💫</h1>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Mrhanstz/followers">
-    <button style="background-color: #24292f; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/GitHub_Logo_White.png/1200px-GitHub_Logo_White.png" alt="GitHub Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Followers
-    </button>
+<h4 align="center">1. GitHub Followers</h4>
+<p style="text-align: center; font-size: 1.2em;">
+  <a href="https://github.com/Mrhanstz/followers" target="_blank">
+    <img alt="GitHub Followers" src="https://img.shields.io/badge/-GitHub%20Followers-24292F?style=for-the-badge&logo=github&logoColor=white" width="150" height="28">
   </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Mrhanstz/VORTEX-XMD/stargazers/">
-    <button style="background-color: #28a745; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Font_Awesome_5_brands_github.svg/768px-Font_Awesome_5_brands_github.svg.png" alt="GitHub Stars" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Stars
-    </button>
+<h4 align="center">2. GitHub Stars</h4>
+<p style="text-align: center; font-size: 1.2em;">
+  <a href="https://github.com/Mrhanstz/VORTEX-XMD/stargazers/" target="_blank">
+    <img alt="GitHub Stars" src="https://img.shields.io/badge/-GitHub%20Stars-28A745?style=for-the-badge&logo=github&logoColor=white" width="150" height="28">
   </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Mrhanstz/VORTEX-XMD/network/members">
-    <button style="background-color: #ffc107; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Fork_icon.svg" alt="Fork Icon" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Forks
-    </button>
+<h4 align="center">3. GitHub Forks</h4>
+<p style="text-align: center; font-size: 1.2em;">
+  <a href="https://github.com/Mrhanstz/VORTEX-XMD/network/members" target="_blank">
+    <img alt="GitHub Forks" src="https://img.shields.io/badge/-GitHub%20Forks-FFDD00?style=for-the-badge&logo=github&logoColor=black" width="150" height="28">
   </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Mrhanstz/VORTEX-XMD/">
-    <button style="background-color: #17a2b8; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png" alt="GitHub Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Size
-    </button>
+<h4 align="center">4. GitHub Size</h4>
+<p style="text-align: center; font-size: 1.2em;">
+  <a href="https://github.com/Mrhanstz/VORTEX-XMD/" target="_blank">
+    <img alt="GitHub Size" src="https://img.shields.io/badge/-GitHub%20Size-17A2B8?style=for-the-badge&logo=github&logoColor=white" width="150" height="28">
   </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/Mrhanstz/VORTEX-XMD/graphs/commit-activity">
-    <button style="background-color: #dc3545; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Octicons-graph.svg/1024px-Octicons-graph.svg.png" alt="Graph Icon" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Maintained?
-    </button>
+<h4 align="center">5. GitHub Maintained?</h4>
+<p style="text-align: center; font-size: 1.2em;">
+  <a href="https://github.com/Mrhanstz/VORTEX-XMD/graphs/commit-activity" target="_blank">
+    <img alt="GitHub Maintained" src="https://img.shields.io/badge/-GitHub%20Maintained-DC3545?style=for-the-badge&logo=github&logoColor=white" width="150" height="28">
   </a>
 </p>
 
@@ -55,81 +45,54 @@
   <img src="https://i.imgur.com/LyHic3i.gif" />
 </p>
 
-<p align="center">
-  <a href="https://github.com/Mrhanstz">
-    <img src="http://readme-typing-svg.herokuapp.com?color=blue&center=true&vCenter=true&multiline=false&lines=VORTEX-XMD+MultiDevice;Developed+by+Mr-HansTz;Give+star+and+fork+this+Repo+bro+🌟" alt="Mrhanstz Readme">
-  </a>
-</p>
-
 <h2 align="center">VORTEX Deployment Options</h2>
 
 <h4 align="center">1. Heroku</h4>
 <p style="text-align: center; font-size: 1.2em;">
-  <a href="https://vortex-hanstz.vercel.app">
-    <button style="background-color: #430098; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Heroku_logo.svg" alt="Heroku Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Deploy on Heroku
-    </button>
+  <a href="https://vortex-hanstz.vercel.app" target="_blank">
+    <img alt="Deploy on Heroku" src="https://img.shields.io/badge/-Heroku%20Deploy-430098?style=for-the-badge&logo=heroku&logoColor=white" width="150" height="28">
   </a>
 </p>
 
 <h4 align="center">2. TalkDrove Free</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://talkdrove.com/share-bot/66" target="_blank">
-    <button style="background-color: #ff3e00; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Talkdrove_Logo.svg" alt="TalkDrove Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Deploy on TalkDrove
-    </button>
+    <img alt="Deploy on TalkDrove" src="https://img.shields.io/badge/-TalkDrove%20Deploy-FF3E00?style=for-the-badge&logo=talkdrove&logoColor=white" width="150" height="28">
   </a>
 </p>
 
 <h4 align="center">3. Koyeb</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://app.koyeb.com/services/deploy?type=git&repository=Mrhanstz/VORTEX-XMD&ports=3000&env[PREFIX]=.&env[SESSION_ID]=&env[ALWAYS_ONLINE]=false&env[MODE]=public&env[AUTO_STATUS_MSG]=Seen%20status%20by%20SUBZERO-MD&env[AUTO_STATUS_REPLY]=false&env[AUTO_STATUS_SEEN]=true&env[AUTO_TYPING]=false&env[ANTI_LINK]=true&env[AUTO_REACT]=false&env[READ_MESSAGE]=false" target="_blank">
-    <button style="background-color: #2e84d2; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Koyeb_logo.svg/1200px-Koyeb_logo.svg.png" alt="Koyeb Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Deploy on Koyeb
-    </button>
+    <img alt="Deploy on Koyeb" src="https://img.shields.io/badge/-Koyeb%20Deploy-2E84D2?style=for-the-badge&logo=koyeb&logoColor=white" width="150" height="28">
   </a>
 </p>
 
 <h4 align="center">4. Railway</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://railway.app/new" target="_blank">
-    <button style="background-color: #f8591e; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Railway.app_logo.svg" alt="Railway Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Deploy on Railway
-    </button>
+    <img alt="Deploy on Railway" src="https://img.shields.io/badge/-Railway%20Deploy-FF8700?style=for-the-badge&logo=railway&logoColor=white" width="150" height="28">
   </a>
 </p>
 
 <h4 align="center">5. Render</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://dashboard.render.com/web/new" target="_blank">
-    <button style="background-color: #001a57; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Render_logo.svg/1024px-Render_logo.svg.png" alt="Render Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Deploy on Render
-    </button>
+    <img alt="Deploy on Render" src="https://img.shields.io/badge/-Render%20Deploy-001A57?style=for-the-badge&logo=render&logoColor=white" width="150" height="28">
   </a>
 </p>
 
 <h4 align="center">6. Hugging Face</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://app.netlify.com/" target="_blank">
-    <button style="background-color: #ff4a9a; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Hugging_Face_logo.png" alt="Hugging Face Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Deploy on Hugging Face
-    </button>
+    <img alt="Deploy on Hugging Face" src="https://img.shields.io/badge/-Hugging%20Face%20Deploy-FF4A9A?style=for-the-badge&logo=huggingface&logoColor=white" width="150" height="28">
   </a>
 </p>
 
 <h4 align="center">7. Replit</h4>
 <p style="text-align: center; font-size: 1.2em;">
   <a href="https://replit.com/~" target="_blank">
-    <button style="background-color: #ff5757; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/00/Replit_logo.svg" alt="Replit Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Deploy on Replit
-    </button>
+    <img alt="Deploy on Replit" src="https://img.shields.io/badge/-Replit%20Deploy-FF5757?style=for-the-badge&logo=replit&logoColor=white" width="150" height="28">
   </a>
 </p>
 
@@ -149,10 +112,7 @@
 
 <div align="center">
   <a href="https://whatsapp.com/channel/0029Vb4a985InlqSS0l3ro3c#N7Mti4kjHnOwhF8PLajt4KvJt_dNPPAeNjgLaszm3po">
-    <button style="background-color: #25d366; color: white; padding: 10px 20px; border-radius: 5px; border: none; cursor: pointer; margin-bottom: 10px;">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/WhatsApp_logo_2023.png" alt="WhatsApp Logo" width="20" height="20" style="vertical-align: middle; margin-right: 8px;">
-      Join WhatsApp Channel
-    </button>
+    <img alt="WhatsApp Channel" src="https://img.shields.io/badge/-Join%20WhatsApp%20Channel-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" width="150" height="28">
   </a>
 </div>
 
