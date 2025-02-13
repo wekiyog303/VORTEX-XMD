@@ -37,7 +37,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 ---
 
   <!-- Recent Commits GIF Animation -->
-  <img src="https://github.com/kinghansmd/Hansdatabase/raw/refs/heads/main/ec0a2d198778426c843e36c8c304fce8.gif" alt="GitHub Activity Animation" width="800" style="border-radius: 10px;">
+  <img src="https://files.catbox.moe/k3gfrv.gif" alt="GitHub Activity Animation" width="800" style="border-radius: 10px;">
 </p>
 
 <p align="center">
