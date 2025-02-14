@@ -105968,7 +105968,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 ---
 
   <!-- Recent Commits GIF Animation -->
-  <img src="https://files.catbox.moe/k3gfrv.gif" alt="GitHub Activity Animation" width="800" style="border-radius: 10px;">
+  <img src="https://files.catbox.moe/vlaka5.gif" alt="GitHub Activity Animation" width="800" style="border-radius: 10px;">
 </p>
 
 <p align="center">
