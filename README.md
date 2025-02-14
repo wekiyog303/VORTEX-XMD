@@ -105961,14 +105961,14 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 
 <p align="center">
   <a href="https://github.com/Mrhanstz">
-    <img src="http://readme-typing-svg.herokuapp.com?color=blue&center=true&vCenter=true&multiline=false&lines=VORTEX-XMD+MultiDevice;Developed+by+Mr-HansTz;Give+star+and+fork+this+Repo+bro+🌟" alt="Mrhanstz readme">
+    <img src="http://readme-typing-svg.herokuapp.com?color=blue&center=true&vCenter=true&multiline=false&lines=VORTEX-XMD+MULTIDEVICE;DEVELOPED+BY+MR-HansTz;Give+star+and+fork+this+Repo+bro+🌟" alt="Mrhanstz readme">
   </a>
 </p>
 
 ---
 
   <!-- Recent Commits GIF Animation -->
-  <img src="https://files.catbox.moe/k3gfrv.gif" alt="GitHub Activity Animation" width="800" style="border-radius: 10px;">
+  <img src="https://files.catbox.moe/rp9dr3.gif" alt="GitHub Activity Animation" width="800" style="border-radius: 10px;">
 </p>
 
 <p align="center">
