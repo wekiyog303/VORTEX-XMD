@@ -1,4 +1,4 @@
-
+VORTEX XMD BY HANSTZTECH
 
 
 
@@ -105956,8 +105956,6 @@ Secure & Fast Deployment Full Access to Premium Features 24/7 Support Available 
 🚀 Get your premium bot now and level up your automation! 🚀
 
 Let me know if y ou need any changes!
-
-// IF YOUR DEVELOPER DID YOU WANT HIDE YOUR PLUGINS LIME ME LIKE VORTEX-XMD FIND ME OK
 
 BUY PREMIUM
 
@@ -419513,3 +419511,4 @@ DON'T FOR GET TO FOLLOW OUR CHANNNEL</p>
 
 
 
+HELLO USER 😎😁
