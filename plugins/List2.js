@@ -1,73 +1,71 @@
-const config = require('../config');
-const { cmd } = require('../command');
-const path = require('path');
 const fs = require('fs');
+const path = require('path');
+const { cmd } = require('../command');
+
+const pluginsPath = path.join(__dirname, '../plugins'); 
 
 cmd({
     pattern: "list2",
     alias: ["listcmd", "commands"],
-    desc: "menu the bot",
+    desc: "Show available command categories",
     category: "menu",
     react: "⚡",
     filename: __filename
-},
-async (conn, mek, m, { from, reply }) => {
+}, async (conn, mek, m, { from, reply }) => {
     try {
-        const pluginsDir = path.join(__dirname, '../plugins');
-        const pluginCategories = {};
+        let categories = {};
 
-        // Read all plugin directories dynamically
-        const categories = fs.readdirSync(pluginsDir).filter(folder => fs.statSync(path.join(pluginsDir, folder)).isDirectory());
-        
-        categories.forEach(category => {
-            const categoryPath = path.join(pluginsDir, category);
-            const commands = fs.readdirSync(categoryPath).filter(file => file.endsWith('.js'));
-            if (commands.length > 0) {
-                pluginCategories[category] = commands.map(cmd => cmd.replace('.js', ''));
+        // Read plugins dynamically
+        const files = fs.readdirSync(pluginsPath).filter(file => file.endsWith('.js'));
+
+        files.forEach(file => {
+            const plugin = require(path.join(pluginsPath, file));
+
+            if (plugin?.cmd?.category) {
+                let cat = plugin.cmd.category.toUpperCase();
+                if (!categories[cat]) categories[cat] = [];
+                categories[cat].push(plugin.cmd.pattern);
             }
         });
 
-        let commandDescription = "╭━━━━━━━━━━━━⪼\n";
-        commandDescription += "Installed Plugins:\n";
-
-        // Loop through dynamically found categories
-        for (const [category, cmds] of Object.entries(pluginCategories)) {
-            commandDescription += `\n*${category} Commands*:\n`;
-            cmds.forEach(cmd => {
-                commandDescription += `⬡│▸ *${cmd}*\n`;
-            });
-        }
-
-        commandDescription += "╰━━━━━━━━━━━━⪼\n";
+        // Send short category list with an image
+        let categoryList = `📌 *Available Categories:* \n\n`;
+        categoryList += Object.keys(categories).map((cat, i) => `➤ *${i + 1}.* ${cat}`).join('\n');
+        categoryList += `\n\n📩 *Reply with a category name to get its commands!*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: 'https://files.catbox.moe/5hdckf.jpeg' },
-                caption: commandDescription + `\n> ${config.DESCRIPTION}`,
-                contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363395768630577@newsletter',
-                        newsletterName: '💫 Vᴏʀᴛᴇx xᴍᴅ 💫',
-                        serverMessageId: 143
-                    }
-                }
+                image: { url: `https://files.catbox.moe/5hdckf.jpeg` },
+                caption: categoryList
             },
             { quoted: mek }
         );
 
-        // Send a brief audio message
-        await conn.sendMessage(from, {
-            audio: { url: 'https://github.com/devhanstz/VORTEX-XMD-DATA/raw/refs/heads/main/KingHans/Menu.mp3' },
-            mimetype: 'audio/mp4',
-            ptt: true
-        }, { quoted: mek });
+        // Send the song after listing categories
+        await conn.sendMessage(
+            from,
+            {
+                audio: { url: 'https://github.com/devhanstz/VORTEX-XMD-DATA/raw/refs/heads/main/KingHans/Menu.mp3' },
+                mimetype: 'audio/mp4',
+                ptt: true
+            },
+            { quoted: mek }
+        );
+
+        // Reply handler for category selection
+        conn.on('message-new', async msg => {
+            let selectedCat = msg.body.toUpperCase();
+            if (categories[selectedCat]) {
+                let cmdList = `🛠 *Commands in ${selectedCat}:* \n\n`;
+                cmdList += categories[selectedCat].map(cmd => `• ${cmd}`).join('\n');
+
+                await conn.sendMessage(from, { text: cmdList }, { quoted: msg });
+            }
+        });
 
     } catch (e) {
         console.log(e);
-        reply(`${e}`);
+        reply(`Error: ${e.message}`);
     }
 });
