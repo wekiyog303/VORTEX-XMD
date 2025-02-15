@@ -65,7 +65,7 @@ cmd({
     }
     let _0xde1929 = _0x21f829.data.data.url;
     fs.unlinkSync(_0x375818);
-    _0x14e812.reply("*ɢᴍᴀx ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ*\n\n " + _0x4bfc7e.length + " Byte(s)\n \n*URL :* " + _0xde1929 + "\n\n> *© ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ Vᴏʀᴛᴇx xᴍᴅ 💫*");
+    _0x14e812.reply("*Vᴏʀᴛᴇx ᴜᴘʟᴏᴀᴅᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ*\n\n " + _0x4bfc7e.length + " Byte(s)\n \n*URL :* " + _0xde1929 + "\n\n> *© ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ Vᴏʀᴛᴇx xᴍᴅ 💫*");
   } catch (_0x277f1f) {
     _0x83bc5c('' + _0x277f1f);
     console.log(_0x277f1f);
