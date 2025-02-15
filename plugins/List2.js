@@ -1,124 +1,88 @@
 const fs = require('fs');
 const path = require('path');
-const axios = require('axios');
+const config = require('../config');
 const { cmd } = require('../command');
+const axios = require('axios');
 
-const pluginsPath = path.join(__dirname, '../plugins');
-const githubUrl = "https://raw.githubusercontent.com/DevHansTz1/Hans-Tz/refs/heads/main/HansTz.json"; // Change to your actual GitHub repo
+const PLUGINS_DIR = path.join(__dirname, '../plugins');
+const IMAGE_JSON_URL = 'https://raw.githubusercontent.com/DevHansTz1/Hans-Tz/refs/heads/main/HansTz.json';
 
-let shuffledImages = [];
-let imageIndex = 0;
+let usedImages = [];
 
-// Function to fetch images from GitHub JSON
-async function fetchImages() {
+async function getRandomImage() {
     try {
-        let response = await axios.get(githubUrl);
-        if (response.data && Array.isArray(response.data.images)) {
-            shuffledImages = response.data.images.sort(() => Math.random() - 0.5); // Shuffle images
-            imageIndex = 0;
-        } else {
-            console.log("⚠ Invalid JSON format: Missing 'images' array.");
+        const { data } = await axios.get(IMAGE_JSON_URL);
+        if (!Array.isArray(data) || data.length === 0) return null;
+        
+        const availableImages = data.filter(img => !usedImages.includes(img));
+        if (availableImages.length === 0) {
+            usedImages = [];
+            return data[0];
         }
+        
+        const randomImage = availableImages[Math.floor(Math.random() * availableImages.length)];
+        usedImages.push(randomImage);
+        return randomImage;
     } catch (error) {
-        console.log("⚠ Failed to fetch images from GitHub:", error.message);
+        console.error('Error fetching images:', error);
+        return null;
     }
 }
 
-// Get next image from the shuffled list
-async function getNextImage() {
-    if (shuffledImages.length === 0) {
-        await fetchImages();
-    }
-    let image = shuffledImages[imageIndex];
-    imageIndex++;
+function getAllCommands() {
+    const categories = {};
+    const files = fs.readdirSync(PLUGINS_DIR).filter(file => file.endsWith('.js'));
 
-    if (imageIndex >= shuffledImages.length) {
-        shuffledImages = shuffledImages.sort(() => Math.random() - 0.5); // Shuffle again
-        imageIndex = 0;
-    }
-    return image;
+    files.forEach(file => {
+        const plugin = require(path.join(PLUGINS_DIR, file));
+        if (plugin.category) {
+            const categoryName = plugin.category;
+            if (!categories[categoryName]) {
+                categories[categoryName] = [];
+            }
+            categories[categoryName].push(plugin.pattern);
+        }
+    });
+    return categories;
 }
 
-// Command to list all available commands
 cmd({
-    pattern: "list",
-    alias: ["listcmd", "commands"],
-    desc: "Show all available commands",
-    category: "menu",
-    react: "⚡",
+    pattern: 'list',
+    alias: ['listcmd', 'commands'],
+    desc: 'Menu for the bot',
+    category: 'menu',
+    react: '⚡',
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
     try {
-        let files = fs.readdirSync(pluginsPath).filter(file => file.endsWith('.js'));
-
-        if (files.length === 0) {
-            return reply("⚠ No command files found.");
-        }
-
-        let commandGroups = {};
-
-        // Read each file and extract `pattern` and `category`
-        files.forEach(file => {
-            let content = fs.readFileSync(path.join(pluginsPath, file), 'utf-8');
-            let patternMatch = content.match(/pattern:\s*["']([^"']+)["']/);
-            let categoryMatch = content.match(/category:\s*["']([^"']+)["']/);
-
-            if (patternMatch && categoryMatch) {
-                let command = patternMatch[1];
-                let category = categoryMatch[1];
-
-                if (!commandGroups[category]) {
-                    commandGroups[category] = [];
-                }
-                commandGroups[category].push(command);
-            }
-        });
-
-        if (Object.keys(commandGroups).length === 0) {
-            return reply("⚠ No valid commands found.");
-        }
-
-        // Build the message in your preferred format
-        let commandList = '';
-
-        for (let category in commandGroups) {
-            commandList += `╭━━〔 *${category}* 〕━┈⊷\n`;
-            commandList += `┃◈╭────────────·๏\n`;
-
-            commandGroups[category].forEach(cmd => {
-                commandList += `┃◈┃• ${cmd}\n`;
+        const categories = getAllCommands();
+        let menuText = '';
+        
+        Object.entries(categories).forEach(([category, commands]) => {
+            menuText += `╭━━〔 *${category}* 〕━┈⊷\n`;
+            menuText += '┃◈╭────────────·๏\n';
+            commands.forEach(cmd => {
+                menuText += `┃◈┃• ${cmd}\n`;
             });
+            menuText += '┃◈└───────────┈⊷\n';
+            menuText += '╰─────────────┈⊷\n\n';
+        });
+        
+        const randomImage = await getRandomImage();
+        await conn.sendMessage(from, {
+            image: { url: randomImage },
+            caption: menuText
+        }, { quoted: mek });
 
-            commandList += `┃◈└───────────┈⊷\n`;
-            commandList += `╰─────────────┈⊷\n\n`;
-        }
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: 'https://github.com/devhanstz/VORTEX-XMD-DATA/raw/refs/heads/main/KingHans/Menu.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: mek });
 
-        // Get next image from GitHub JSON
-        let imageUrl = await getNextImage();
-
-        // Send the message with a random image
-        await conn.sendMessage(
-            from,
-            {
-                image: { url: imageUrl },
-                caption: commandList
-            },
-            { quoted: mek }
-        );
-
-        // Send the song after listing commands
-        await conn.sendMessage(
-            from,
-            {
-                audio: { url: 'https://github.com/devhanstz/VORTEX-XMD-DATA/raw/refs/heads/main/KingHans/Menu.mp3' },
-                mimetype: 'audio/mp4',
-                ptt: true
-            },
-            { quoted: mek }
-        );
-
-    } catch (e) {
-        console.log(e);
-        reply(`Error: ${e.message}`);
+    } catch (error) {
+        console.error(error);
+        reply('An error occurred while generating the menu.');
     }
 });
