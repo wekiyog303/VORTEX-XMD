@@ -16,7 +16,7 @@ cmd({
         let files = fs.readdirSync(pluginsPath).filter(file => file.endsWith('.js'));
 
         if (files.length === 0) {
-            return reply("🥺 No command files found.");
+            return reply("⚠ No command files found.");
         }
 
         let commandGroups = {};
@@ -42,20 +42,21 @@ cmd({
             return reply("⚠ No valid commands found.");
         }
 
-        // Build the message
-        let commandList = `📌 *Available Commands:*\n\n`;
-        let categoryIndex = 1;
+        // Build the message with your desired style
+        let commandList = '';
 
         for (let category in commandGroups) {
-            commandList += `*${categoryIndex}. ${category}*\n`;
-            commandGroups[category].forEach((cmd, index) => {
-                commandList += `   ${index + 1}. ${cmd}\n`;
+            commandList += `╭━━〔 *${category}* 〕━┈⊷\n`;
+            commandList += `┃◈╭────────────·๏\n`;
+
+            commandGroups[category].forEach(cmd => {
+                commandList += `┃◈┃• ${cmd}\n`;
             });
-            commandList += `\n`;
-            categoryIndex++;
+
+            commandList += `╰━━━━━━━━━━━━━━━━━━━╯\n\n`;
         }
 
-        // Send the message with the command list
+        // Send the message with the stylish command list
         await conn.sendMessage(
             from,
             {
