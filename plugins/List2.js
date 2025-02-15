@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { cmd } = require('../command');
 
-const pluginsPath = path.join(__dirname, '../plugins'); 
+const pluginsPath = path.join(__dirname, '../plugins');
 
 cmd({
     pattern: "list2",
@@ -13,50 +13,49 @@ cmd({
     filename: __filename
 }, async (conn, mek, m, { from, reply }) => {
     try {
-        let commands = [];
+        let files = fs.readdirSync(pluginsPath).filter(file => file.endsWith('.js'));
 
-        // Read all plugin files
-        const files = fs.readdirSync(pluginsPath).filter(file => file.endsWith('.js'));
-
-        files.forEach(file => {
-            try {
-                const plugin = require(path.join(pluginsPath, file));
-
-                if (plugin?.cmd?.pattern) {
-                    let commandName = plugin.cmd.pattern;
-                    let category = plugin?.cmd?.category ? plugin.cmd.category.toUpperCase() : "UNCATEGORIZED";
-
-                    commands.push({ name: commandName, category });
-                }
-            } catch (err) {
-                console.log(`Error loading ${file}: ${err.message}`);
-            }
-        });
-
-        if (commands.length === 0) {
-            return reply("⚠ No commands found.");
+        if (files.length === 0) {
+            return reply("🥺 No command files found.");
         }
 
-        // Organize commands by category
-        let commandList = `📌 *Available Commands:* \n\n`;
-        let groupedCommands = {};
+        let commandGroups = {};
 
-        commands.forEach(cmd => {
-            if (!groupedCommands[cmd.category]) {
-                groupedCommands[cmd.category] = [];
+        // Read each file and extract `pattern` and `category`
+        files.forEach(file => {
+            let content = fs.readFileSync(path.join(pluginsPath, file), 'utf-8');
+            let patternMatch = content.match(/pattern:\s*["']([^"']+)["']/);
+            let categoryMatch = content.match(/category:\s*["']([^"']+)["']/);
+
+            if (patternMatch && categoryMatch) {
+                let command = patternMatch[1];
+                let category = categoryMatch[1];
+
+                if (!commandGroups[category]) {
+                    commandGroups[category] = [];
+                }
+                commandGroups[category].push(command);
             }
-            groupedCommands[cmd.category].push(cmd.name);
         });
 
-        Object.keys(groupedCommands).forEach(category => {
-            commandList += `📂 *${category}*\n`;
-            groupedCommands[category].forEach(cmd => {
-                commandList += `  ➤ ${cmd}\n`;
+        if (Object.keys(commandGroups).length === 0) {
+            return reply("⚠ No valid commands found.");
+        }
+
+        // Build the message
+        let commandList = `📌 *Available Commands:*\n\n`;
+        let categoryIndex = 1;
+
+        for (let category in commandGroups) {
+            commandList += `*${categoryIndex}. ${category}*\n`;
+            commandGroups[category].forEach((cmd, index) => {
+                commandList += `   ${index + 1}. ${cmd}\n`;
             });
             commandList += `\n`;
-        });
+            categoryIndex++;
+        }
 
-        // Send the message
+        // Send the message with the command list
         await conn.sendMessage(
             from,
             {
