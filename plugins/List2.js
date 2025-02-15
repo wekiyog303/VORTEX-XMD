@@ -14,24 +14,39 @@ cmd({
 }, async (conn, mek, m, { from, reply }) => {
     try {
         let categories = {};
+        let categoryKeys = [];
 
-        // Read plugins dynamically
+        // Read all plugin files
         const files = fs.readdirSync(pluginsPath).filter(file => file.endsWith('.js'));
 
         files.forEach(file => {
-            const plugin = require(path.join(pluginsPath, file));
+            try {
+                const plugin = require(path.join(pluginsPath, file));
 
-            if (plugin?.cmd?.category) {
-                let cat = plugin.cmd.category.toUpperCase();
-                if (!categories[cat]) categories[cat] = [];
-                categories[cat].push(plugin.cmd.pattern);
+                if (plugin?.cmd?.category) {
+                    let category = plugin.cmd.category.toUpperCase(); 
+
+                    if (!categories[category]) {
+                        categories[category] = [];
+                        categoryKeys.push(category);
+                    }
+                    categories[category].push(plugin.cmd.pattern);
+                }
+            } catch (err) {
+                console.log(`Error loading ${file}: ${err.message}`);
             }
         });
 
-        // Send short category list with an image
+        if (categoryKeys.length === 0) {
+            return reply("⚠ No command categories found.");
+        }
+
+        // Send numbered category list
         let categoryList = `📌 *Available Categories:* \n\n`;
-        categoryList += Object.keys(categories).map((cat, i) => `➤ *${i + 1}.* ${cat}`).join('\n');
-        categoryList += `\n\n📩 *Reply with a category name to get its commands!*`;
+        categoryKeys.forEach((cat, i) => {
+            categoryList += `*${i + 1}.* ${cat}\n`;
+        });
+        categoryList += `\n📩 *Reply with a category number to get its commands!*`;
 
         await conn.sendMessage(
             from,
@@ -53,10 +68,11 @@ cmd({
             { quoted: mek }
         );
 
-        // Reply handler for category selection
+        // Handle replies for category selection
         conn.on('message-new', async msg => {
-            let selectedCat = msg.body.toUpperCase();
-            if (categories[selectedCat]) {
+            let selectedNumber = parseInt(msg.body.trim());
+            if (!isNaN(selectedNumber) && selectedNumber > 0 && selectedNumber <= categoryKeys.length) {
+                let selectedCat = categoryKeys[selectedNumber - 1];
                 let cmdList = `🛠 *Commands in ${selectedCat}:* \n\n`;
                 cmdList += categories[selectedCat].map(cmd => `• ${cmd}`).join('\n');
 
