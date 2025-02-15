@@ -1,6 +1,7 @@
 const config = require('../config');
-const { cmd, commands } = require('../command');
+const { cmd } = require('../command');
 const path = require('path');
+const fs = require('fs');
 
 cmd({
     pattern: "list2",
@@ -10,25 +11,32 @@ cmd({
     react: "⚡",
     filename: __filename
 },
-async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+async (conn, mek, m, { from, reply }) => {
     try {
-        // List installed plugin categories
-        const pluginCategories = [
-            { name: "Download", path: path.join(__dirname, '../plugins/download') },
-            { name: "Anime", path: path.join(__dirname, '../plugins/anime') },
-            { name: "Info", path: path.join(__dirname, '../plugins/info') },
-            { name: "Group", path: path.join(__dirname, '../plugins/group') },
-            { name: "Owner", path: path.join(__dirname, '../plugins/owner') },
-            { name: "Convert", path: path.join(__dirname, '../plugins/convert') }
-        ];
+        const pluginsDir = path.join(__dirname, '../plugins');
+        const pluginCategories = {};
+
+        // Read all plugin directories dynamically
+        const categories = fs.readdirSync(pluginsDir).filter(folder => fs.statSync(path.join(pluginsDir, folder)).isDirectory());
+        
+        categories.forEach(category => {
+            const categoryPath = path.join(pluginsDir, category);
+            const commands = fs.readdirSync(categoryPath).filter(file => file.endsWith('.js'));
+            if (commands.length > 0) {
+                pluginCategories[category] = commands.map(cmd => cmd.replace('.js', ''));
+            }
+        });
 
         let commandDescription = "╭━━━━━━━━━━━━⪼\n";
         commandDescription += "Installed Plugins:\n";
 
-        // Loop through categories and add to the command list
-        pluginCategories.forEach(category => {
-            commandDescription += `\n*${category.name} Commands*: ${category.path}\n`;
-        });
+        // Loop through dynamically found categories
+        for (const [category, cmds] of Object.entries(pluginCategories)) {
+            commandDescription += `\n*${category} Commands*:\n`;
+            cmds.forEach(cmd => {
+                commandDescription += `⬡│▸ *${cmd}*\n`;
+            });
+        }
 
         commandDescription += "╰━━━━━━━━━━━━⪼\n";
 
