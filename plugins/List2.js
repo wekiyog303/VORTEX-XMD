@@ -97,23 +97,26 @@ cmd({
         // Get next image from GitHub JSON
         let imageUrl = await getNextImage();
 
+        // Create the message options
+        const messageOptions = {
+            mentionedJid: [m.sender],  // Add the mentionedJid property
+            forwardingScore: 999,  // Add the forwardingScore property
+            isForwarded: true,  // Set isForwarded to true
+            forwardedNewsletterMessageInfo: {
+                newsletterJid: '120363395768630577@newsletter',  // Add newsletterJid
+                newsletterName: '💫 Vᴏʀᴛᴇx xᴍᴅ 💫',  // Add newsletterName
+                serverMessageId: 143  // Add serverMessageId
+            }
+        };
+
         // Send the message with a random image
         await conn.sendMessage(
             from,
             {
                 image: { url: imageUrl },
-                contextInfo: {
-                    mentionedJid: [m.sender],
-                    forwardingScore: 999,
-                    isForwarded: true,
-                    forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363395768630577@newsletter', // Connected the newsletterJid
-                        newsletterName: '💫 Vᴏʀᴛᴇx xᴍᴅ 💫',
-                        serverMessageId: 143
-                    }
-                }
+                caption: commandList
             },
-            { quoted: mek }
+            { ...messageOptions, quoted: mek }
         );
 
         // Send the song after listing commands
@@ -124,7 +127,7 @@ cmd({
                 mimetype: 'audio/mp4',
                 ptt: true
             },
-            { quoted: mek }
+            { ...messageOptions, quoted: mek }
         );
 
     } catch (e) {
