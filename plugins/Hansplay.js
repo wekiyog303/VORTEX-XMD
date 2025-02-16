@@ -16,7 +16,7 @@ const fetchLogoUrl = async (url, name) => {
 
 // Video Logo Command
 cmd({
-    pattern: "videologo ?(.*)",
+    pattern: "videologo",
     alias: ["videomaker"],
     desc: "Generate animated video logos using API",
     category: "media",
