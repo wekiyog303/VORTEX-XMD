@@ -94,32 +94,30 @@ cmd({
             commandList += `╰─────────────┈⊷\n\n`;
         }
 
-        // Get next image from GitHub JSON
+        // Get random image from GitHub JSON
         let imageUrl = await getNextImage();
 
-        // Create the message options
-        const messageOptions = {
-            mentionedJid: [m.sender],  // Add the mentionedJid property
-            forwardingScore: 999,  // Add the forwardingScore property
-            isForwarded: true,  // Set isForwarded to true
-            forwardedNewsletterMessageInfo: {
-                newsletterJid: '120363395768630577@newsletter',  // Add newsletterJid
-                newsletterName: '💫 Vᴏʀᴛᴇx xᴍᴅ 💫',  // Add newsletterName
-                serverMessageId: 143  // Add serverMessageId
-            }
-        };
-
-        // Send the message with a random image
+        // Send the image with context info
         await conn.sendMessage(
             from,
             {
                 image: { url: imageUrl },
-                caption: commandList
+                caption: commandList,
+                contextInfo: {
+                    mentionedJid: [m.sender],  // Mention the sender
+                    forwardingScore: 999,  // Add the forwarding score
+                    isForwarded: true,  // Mark the message as forwarded
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363395768630577@newsletter',  // Add newsletter JID
+                        newsletterName: '💫 Vᴏʀᴛᴇx xᴍᴅ 💫',  // Add newsletter name
+                        serverMessageId: 143  // Add server message ID
+                    }
+                }
             },
-            { ...messageOptions, quoted: mek }
+            { quoted: mek }
         );
 
-        // Send the song after listing commands
+        // Send the audio message
         await conn.sendMessage(
             from,
             {
@@ -127,7 +125,7 @@ cmd({
                 mimetype: 'audio/mp4',
                 ptt: true
             },
-            { ...messageOptions, quoted: mek }
+            { quoted: mek }
         );
 
     } catch (e) {
