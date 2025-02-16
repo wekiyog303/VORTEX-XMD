@@ -97,20 +97,19 @@ cmd({
         // Get next image from GitHub JSON
         let imageUrl = await getNextImage();
 
-        // Send the message with a random image and contextInfo
+        // Send the message with a random image and contextInfo (without caption)
         await conn.sendMessage(
             from,
             {
                 image: { url: imageUrl },
-                caption: "Here are the available commands:",  // Directly put the caption here
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363395768630577@newsletter',
+                        newsletterJid: '120363395768630577@newsletter', // Newsletter JID as requested
                         newsletterName: '💫 Vᴏʀᴛᴇx xᴍᴅ 💫',
-                        serverMessageId: 143  // Adjust the message ID if necessary
+                        serverMessageId: 143  // Adjust this ID if needed
                     }
                 }
             },
