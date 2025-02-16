@@ -14,18 +14,18 @@ const fetchLogoUrl = async (url, name) => {
   }
 };
 
-// Video Logo Command
+// Command to generate video logo
 cmd({
-    pattern: "videologo",
+    pattern: "videologo ?(.*)",
     alias: ["videomaker"],
     desc: "Generate animated video logos using API",
     category: "media",
     react: "🎬",
     filename: __filename
 }, async (conn, mek, m, { from, reply, match }) => {
-    let text = match.trim();
+    let text = match.trim(); // Get the name of the logo
 
-    // If user does not enter a name, send example usage
+    // If user does not provide a name, show the example usage.
     if (!text) {
         return reply(`❌ Please provide a name for the video logo!\n\nExample Usage:\n.videologo Hans\n.videologo Vortex\n\nTry again with a name.`);
     }
@@ -57,12 +57,14 @@ Reply with the number of your choice!`;
 
     reply(messageText);
 
-    // Wait for user response
+    // Wait for the user to respond with a number (1-20)
     conn.once("chat-update", async (response) => {
         if (!response.message || !response.message.conversation) return;
         let responseText = response.message.conversation.trim();
 
         let videoUrl;
+
+        // Match the user's response to the correct logo
         switch (responseText) {
             case "1":
                 videoUrl = await fetchLogoUrl("https://en.ephoto360.com/create-sweet-love-video-cards-online-734.html", text);
