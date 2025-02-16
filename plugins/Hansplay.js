@@ -35,7 +35,7 @@ async function fetchVideoLogo(url, text) {
 
 // Command to request video logo
 cmd({
-    pattern: 'videologo ?(.*)',
+    pattern: 'videologo',
     alias: ['vlogo'],
     desc: 'Generate video logos from ePhoto360',
     category: 'media',
