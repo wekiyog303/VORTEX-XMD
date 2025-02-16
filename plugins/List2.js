@@ -41,7 +41,7 @@ async function getNextImage() {
 
 // Command to list all available commands
 cmd({
-    pattern: "list",
+    pattern: "list2",
     alias: ["listcmd", "commands"],
     desc: "Show all available commands",
     category: "menu",
@@ -97,7 +97,7 @@ cmd({
         // Get next image from GitHub JSON
         let imageUrl = await getNextImage();
 
-        // Send the message with a random image and contextInfo (without caption)
+        // Send the message with a random image
         await conn.sendMessage(
             from,
             {
@@ -107,9 +107,9 @@ cmd({
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363395768630577@newsletter', // Newsletter JID as requested
+                        newsletterJid: '120363395768630577@newsletter', // Connected the newsletterJid
                         newsletterName: '💫 Vᴏʀᴛᴇx xᴍᴅ 💫',
-                        serverMessageId: 143  // Adjust this ID if needed
+                        serverMessageId: 143
                     }
                 }
             },
