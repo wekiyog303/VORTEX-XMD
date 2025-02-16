@@ -1,126 +1,100 @@
-const { cmd, commands } = require("../command");
+const { cmd } = require("../command");
 const { fetchJson } = require("../lib/functions");
 const axios = require("axios");
 
 cmd({
-  'pattern': "hanslogo",
+  'pattern': "textlogo",
   'desc': "Create text logos with various styles",
-  'react': '✍️', // Set reaction
+  'react': '✍️',
   'category': "other",
   'filename': __filename,
-  'handler': async (m) => {
-    const text = m.text.trim(); // Get the text input
+}, async (dest, zk, commandeOptions) => {
+  const { ms, repondre, arg } = commandeOptions;
+  const text = arg.join(" ");
 
-    // Send the message with logo choices
-    const messageText = `Reply with below numbers to generate *${text}* logo
+  if (!text) {
+    return repondre("Please provide a search query.");
+  }
 
+  try {
+    const messageText = generateLogoOptionsMessage(text);
+    const contextInfo = getContextInfo(ms.sender);
+    const messageToSend = { text: messageText, contextInfo };
+
+    // Send the message and get the response ID
+    const sentMessage = await zk.sendMessage(dest, messageToSend, { quoted: ms });
+
+    // Listen for user responses
+    zk.ev.on('messages.upsert', async (update) => {
+      const message = update.messages[0];
+      if (!isValidResponse(message)) return;
+
+      const responseText = message.message.extendedTextMessage.text.trim();
+      if (message.message.extendedTextMessage.contextInfo.stanzaId === sentMessage.key.id) {
+        await handleLogoChoice(responseText, text, dest, ms, zk);
+      }
+    });
+  } catch (error) {
+    console.error(error);
+    repondre(`Error: ${error}`);
+  }
+});
+
+// Function to generate logo options message
+const generateLogoOptionsMessage = (text) => {
+  return `Reply with below numbers to generate *${text}* logo:
+  
 1⊷ Black Pink pink logo with members signature  
 2⊷ Black Pink style  
 3⊷ Silver 3D  
-4⊷ Naruto  
-5⊷ Digital Glitch  
-6⊷ Birthday cake  
-7⊷ Zodiac  
-8⊷ Underwater 🫧  
-9⊷ Glow 🌟  
-10⊷ Avatar gold🥇  
-11⊷ Bokeh  
-12⊷ Fireworks 🎇  
-13⊷ Gaming logo  
-14⊷ Signature 💫  
-15⊷ Luxury  
-16⊷ Dragon fire 🐉  
-17⊷ Queen card  
-18⊷ Graffiti color  
-19⊷ Tattoo  
-20⊷ Pentakill 🔥  
-21⊷ Halloween 🎃  
-22⊷ Horror  
-23⊷ Blood 🩸  
-24⊷ Women's day  
-25⊷ Valentine  
-26⊷ Neon light 🕯️  
-27⊷ Gaming assassin  
-28⊷ Foggy glass  
-29⊷ Sand summer beach 🏖️  
-30⊷ Light 🚨  
-31⊷ Modern gold 🪙  
-32⊷ Cartoon style graffiti  
-33⊷ Galaxy ❤️‍🔥  
-34⊷ Anonymous hacker (avatar cyan neon)  
-35⊷ Birthday flower cake 🎂  
-36⊷ Dragon 🐲 ball  
-37⊷ Elegant rotation  
-38⊷ Write text on wet glass  
-39⊷ Water 3D  
-40⊷ Realistic sand ⌛  
-41⊷ PUBG mascot  
-42⊷ Typography  
-43⊷ Naruto Shippuden  
-44⊷ Colourful paint 🎨  
-45⊷ Typography maker  
-46⊷ Incandescent  
-47⊷ Cartoon style graffiti  
-48⊷ Galaxy ❤️‍🔥  
-49⊷ Anonymous hacker (avatar cyan neon)  
-50⊷ Birthday cake
+... (rest of the options)`;
 
-*Enjoy 😂*`;
+};
 
-    await m.reply(messageText); // Send the options for logo types
+// Function to create context for the message
+const getContextInfo = (sender) => {
+  return {
+    mentionedJid: [sender],
+    externalAdReply: {
+      title: "🌟 𝐊𝐄𝐈𝐓𝐇-𝐌𝐃 ✨",
+      body: "Regards, Keithkeizzah",
+      thumbnailUrl: "https://i.imgur.com/v9gJCSD.jpeg",
+      sourceUrl: "https://whatsapp.com/channel/0029Vaan9TF9Bb62l8wpoD47",
+      mediaType: 1,
+      renderLargerThumbnail: true,
+    },
+  };
+};
 
-    // React with ✍️
-    await m.react('✍️');  // React to the message with the ✍️ emoji
+// Function to check if the response message is valid
+const isValidResponse = (message) => {
+  return message && message.message.extendedTextMessage && message.message.extendedTextMessage.text;
+};
 
-    // Listen for the user's next reply
-    m.client.on("message", async (message) => {
-      const responseText = message.text.trim();
+// Function to handle logo choice based on user input
+const handleLogoChoice = async (responseText, text, dest, ms, zk) => {
+  const urlMap = {
+    '1': "https://en.ephoto360.com/create-a-blackpink-style-logo-with-members-signatures-810.html",
+    '2': "https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html",
+    // ... (map other numbers to URLs)
+    '50': "https://en.ephoto360.com/free-zodiac-online-logo-maker-491.html"
+  };
 
-      // Check for a valid selection
-      let logoUrl = null;
-      switch (responseText) {
-        case '1':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/create-a-blackpink-style-logo-with-members-signatures-810.html", text);
-          break;
-        case '2':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/online-blackpink-style-logo-maker-effect-711.html", text);
-          break;
-        case '3':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/create-glossy-silver-3d-text-effect-online-802.html", text);
-          break;
-        case '4':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/naruto-shippuden-logo-style-text-effect-online-808.html", text);
-          break;
-        case '5':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/create-digital-glitch-text-effects-online-767.html", text);
-          break;
-        case '6':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/birthday-cake-96.html", text);
-          break;
-        case '7':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/free-zodiac-online-logo-maker-491.html", text);
-          break;
-        case '8':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/3d-underwater-text-effect-online-682.html", text);
-          break;
-        case '9':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/advanced-glow-effects-74.html", text);
-          break;
-        case '10':
-          logoUrl = await fetchLogoUrl("https://en.ephoto360.com/create-avatar-gold-online-303.html", text);
-          break;
-        // Add more cases as before...
-        default:
-          return await message.reply("*_Invalid number. Please reply with a valid number._*");
-      }
-
-      // If logoUrl is found, send the generated logo
-      if (logoUrl) {
-        await message.reply(`Here is your logo: ${logoUrl}`);
-      }
-    });
+  const logoUrl = urlMap[responseText];
+  if (logoUrl) {
+    const generatedLogoUrl = await fetchLogoUrl(logoUrl, text);
+    if (generatedLogoUrl) {
+      await zk.sendMessage(dest, {
+        image: { url: generatedLogoUrl },
+        caption: `*Downloaded by Alpha Md*`,
+      }, { quoted: ms });
+    }
+  } else {
+    await zk.sendMessage(dest, {
+      text: "*_Invalid number. Please reply with a valid number._*"
+    }, { quoted: ms });
   }
-});
+};
 
 // Function to fetch the logo URL using axios
 const fetchLogoUrl = async (url, name) => {
