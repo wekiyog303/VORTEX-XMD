@@ -106022,17 +106022,17 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 <p>You will need a session ID to run the VORTEX-XMD. Click the button below to obtain your session ID. If there is any issue loading the site, try using a VPN:</p>
 
 <p><strong>1️⃣ Pair Code (Session ID)</strong></p>
-<a href='https://vortex-xmd-session-site.onrender.com/' target="_blank">
+<a href='https://vortex-xmd-session-site-t4k7.onrender.com/' target="_blank">
   <img alt='Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-orange?style=for-the-badge&logo=opencv&logoColor=black'/>
 </a>
 
 <p><strong>2️⃣ Pair Code (Session ID)</strong></p>
-<a href='https://vortex-xmd-session-site.onrender.com/' target="_blank">
+<a href='https://vortex-xmd-session-site-t4k7.onrender.com/' target="_blank">
   <img alt='Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-darkpink?style=for-the-badge&logo=opencv&logoColor=black'/>
 </a>
 
 <p><strong>3️⃣ QR Code (Session ID)</strong></p>
-<a href='https://vortex-xmd-session-site.onrender.com/qr' target="_blank">
+<a href='https://vortex-xmd-session-site-t4k7.onrender.com/qr' target="_blank">
   <img alt='Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-cyan?style=for-the-badge&logo=opencv&logoColor=black'/>
 </a>
 
