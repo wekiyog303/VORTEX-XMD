@@ -118,10 +118,10 @@
     "OWNER_NAME": {
       "desc": "Your Name",
       "required": false,
-      "value": "ᴅᴜʟʟᴀʜ xᴍᴅ"
+      "value": "HANS-MD"
     },
     "NUMERO_OWNER": {
-      "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
+      "desc": "Your number , dont put '+' and put you area code(exemple of togo '255')",
       "required": false,
       "value": "255760774888"
     },
