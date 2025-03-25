@@ -1,8 +1,4 @@
-
-<p align="center">
-<a href='https://dashboard.heroku.com/new?template=https://github.com/Mrhanstz/HANS-MD/tree/main' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-heroku ‎ deploy-FF004D?style=for-the-badge&logo=heroku&logoColor=white'/< width=150 height=28/p></a>
-
-  # 🚀 Hᴀɴs-Xᴍᴅ_ᴠ2  
+ # 🚀 Hᴀɴs-Xᴍᴅ_ᴠ2  
 
 <p align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=900&size=30&duration=4000&pause=1000&width=500&lines=Welcome+to+Hans-Xmd-V2🚀;Created+By+HansTz;Fork+Me+and+Enjoy!" alt="Typing SVG" />
@@ -30,16 +26,22 @@
 ### 1️⃣ Fork the Repo  
 [![Fork Repo](https://img.shields.io/badge/Fork-Repo-222222?style=for-the-badge&logo=github)](https://github.com/Mrhanstz/HANS-XMD_V2/fork)
 
-### 2️⃣ Download the ZIP File  
+### 2️⃣ Download the ZIP File  FOR PANNELS USER
 [![Download ZIP](https://img.shields.io/badge/Download-ZIP-blue?style=for-the-badge&logo=download)](https://github.com/Mrhanstz/HANS-XMD_V2/archive/refs/heads/main.zip)
 
-### 3️⃣ Get Your Session ID  
+### 3️⃣ Get Your Session ID  FOR HEROKU USER
 [![Get Session ID](https://img.shields.io/badge/Get-Session%20ID-orange?style=for-the-badge&logo=key)](Nothing)
 
 ---
 
 ## 📋 Deployment Options  
 
+## FOR HEROKU USER
+
+
+<p align="center">
+<a href='https://dashboard.heroku.com/new?template=https://github.com/Mrhanstz/HANS-MD/tree/main' target="_blank"><img alt='Heroku' src='https://img.shields.io/badge/-heroku ‎ deploy-FF004D?style=for-the-badge&logo=heroku&logoColor=white'/< width=150 height=28/p></a>
+  
 ### 🚀 YouTube How to Deploy On Bot Hosting  
 [![YouTube Tutorial](https://img.shields.io/badge/YouTube-Tutorial-FF0000?style=for-the-badge&logo=youtube)](https://youtu.be/HBUWUVVRzf4?si=4CvKunyL6Wm0Qwm1)
 
