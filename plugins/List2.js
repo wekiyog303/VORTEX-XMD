@@ -4,7 +4,7 @@ const axios = require('axios');
 const { cmd } = require('../command');
 
 const pluginsPath = path.join(__dirname, '../plugins');
-const githubUrl = "https://raw.githubusercontent.com/DevHansTz1/Hans-Tz/refs/heads/main/HansTz.json"; // Change to your actual GitHub repo
+const githubUrl = "https://api.github.com/repos/Mrhanstz/HansTz-Sever/contents/Database"; // Change to your actual GitHub repo
 
 let shuffledImages = [];
 let imageIndex = 0;
