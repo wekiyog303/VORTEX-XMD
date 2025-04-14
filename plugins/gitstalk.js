@@ -19,14 +19,19 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const response = await axios.get(apiUrl);
         const data = response.data;
 
-        let userInfo = `👤 *Username*: ${data.name || data.login}
-🔗 *Github Url*:(${data.html_url})
-📝 *Bio*: ${data.bio || 'Not available'}
-🏙️ *Location*: ${data.location || 'Unknown'}
-📊 *Public Repos*: ${data.public_repos}
-👥 *Followers*: ${data.followers} | Following: ${data.following}
-📅 *Created At*: ${new Date(data.created_at).toDateString()}
-🔭 *Public Gists*: ${data.public_gists}
+        let userInfo = `
+────────────────────────
+📌───────────────────────
+> 🛸┃👤 *Username*: ${data.name || data.login}
+> 🛸┃🔗 *Github Url*:(${data.html_url})
+> 🛸┃📝 *Bio*: ${data.bio || 'Not available'}
+> 🛸┃🏙️ *Location*: ${data.location || 'Unknown'}
+> 🛸┃📊 *Public Repos*: ${data.public_repos}
+> 🛸┃👥 *Followers*: ${data.followers} | Following: ${data.following}
+> 🛸┃📅 *Created At*: ${new Date(data.created_at).toDateString()}
+> 🛸┃🔭 *Public Gists*: ${data.public_gists}
+ ───────────────────────
+────────────────────────
 > © 𝑉𝑜𝑟𝒕𝒆𝒙 𝑿𝒎𝒅 𝘔𝘋`;
           const sentMsg = await conn.sendMessage(from,{image:{url: data.avatar_url },caption: userInfo },{quoted:mek })
     } catch (e) {

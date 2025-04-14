@@ -31,14 +31,13 @@ async (conn, mek, m, { from }) => {
         await conn.sendMessage(from, {
             image: { url: 'https://github.com/Mrhanstz/VORTEX-XMD/raw/refs/heads/main/HansTz/HansTz.jpg' }, // Image URL from your request
             caption: `
-╭━〔 *𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃* 〕━┈⊷
-┃◈╭─────────────·๏
-┃◈┃• *Here is the owner details*
-┃◈┃• *Name* - ${ownerName}
-┃◈┃• *Number* ${ownerNumber}
-┃◈┃• *Version*: 1.0.0
-┃◈└───────────┈⊷
-╰──────────────┈⊷
+━〔 𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃 〕━┈⊷
+──────────────·๏
+> ★│ *Here is the owner details*
+> ★│ *Name* - ${ownerName}
+> ★│ *Number* ${ownerNumber}
+> ★│ *Version*: 1.0.0
+──────────────┈⊷
 > ©𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃`, // Display the owner's details
             contextInfo: {
                 mentionedJid: [`${ownerNumber.replace('+', '')}@s.whatsapp.net`], 

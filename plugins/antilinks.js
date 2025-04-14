@@ -79,7 +79,7 @@ cmd({
 
       if (warningCount < 4) {
         await conn.sendMessage(from, {
-          text: `⚠️ Warning ${warningCount}/4 @${sender.split('@')[0]}! Links are not allowed in this group.\nAfter 4 warnings, you will be removed. 🚫`,
+          text: `⚠️ Warning ${warningCount}/4 @${sender.split('@')[0]}! Links are not allowed in this group.\nAfter 4 warnings, you will be removed. ☠️`,
           mentions: [sender]
         });
       } else {

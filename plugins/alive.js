@@ -3,7 +3,7 @@ const os = require("os");
 const { runtime } = require('../lib/functions');
 
 cmd({
-    pattern: "alive",
+    pattern: "online",
     alias: ["status", "runtime", "uptime"],
     desc: "Check uptime and system status",
     category: "main",
@@ -14,13 +14,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
     try {
         // Generate system status message
         const status = `
-╭──〔𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃〕───·๏
-┃🛸┃• *⏳ Uptime*:  ${runtime(process.uptime())} 
-┃🛸┃• *📟 Ram usage*: ${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)}GB / ${(os.totalmem() / 1024 / 1024).toFixed(2)}TB
-┃🛸┃• *⚙️ HostName*: ${os.hostname()}
-┃🛸┃• *👨‍💻 Creator*: HansTz
-┃🛸┃• *🧬 Version*: 1.0.0
-╰──────────────┈⊷
+──〔𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃 ───·๏
+> 🛸┃• *⏳ Uptime*:  ${runtime(process.uptime())}
+> 🛸┃• *⚙️ HostName*: ${os.hostname()}
+> 🛸┃• *👨‍💻 Creator*: HansTz
+> 🛸┃• *🧬 Version*: V1
+──────────────┈⊷
 > © 𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃`;
 
         // Send the status message with an image
