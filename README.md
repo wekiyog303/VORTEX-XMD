@@ -106052,7 +106052,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 <h4 align="center">2.Talk Drove Free💯</h4>
 <p align="center">
   <a href="https://host.talkdrove.com/dashboard/select-bot/prepare-deployment?botId=58">
-    <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy on Talk Drove">
+    <img src="https://img.shields.io/badge/-TalkDrove ‎Deploy-6971FF?style=for-the-badge&logo=Github&logoColor=white" alt="Deploy on Talk Drove">
   </a>
 </p>
 
