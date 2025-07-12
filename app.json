@@ -26,6 +26,21 @@
       "required": false,
       "value": "public"
      },
+     "CHAT_BOT": {
+      "description": "select your bot work type Chatbot Auto reply make true or false",
+      "required": false,
+      "value": "false"
+     },
+     "ANTICALL": {
+      "description": "Auto Reject Incoming Call's .",
+      "required": false,
+      "value": "public"
+     },
+     "ANTICALL_BLOCK": {
+      "description": "Auto Reject Incoming Call's Give Warn Before Block.",
+      "required": false,
+      "value": "public"
+     },
     "ANTI_DELETE": {
       "description": "set true for show deleted messages.",
       "required": false,
@@ -128,6 +143,16 @@
     },
       "AUTO_REACT": {
       "description": "Make it true if you want react on every message.",
+      "required": false,
+      "value": "false"
+    },
+    "ANTI_CALL": {
+      "description": "Make it true if you want eject all incoming call's ",
+      "required": false,
+      "value": "false"
+    },
+    "ANTI_CALL_BLOCK": {
+      "description": "Make it true if you want 4 warning and eject all incoming call's ",
       "required": false,
       "value": "false"
     },
