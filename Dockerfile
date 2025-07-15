@@ -1,20 +1,21 @@
-FROM node:lts-buster
+FROM node:20-slim
 
-RUN apt-get update && \
-  apt-get install -y \
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
   ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
+  python3 \
+  git \
+  curl \
+  && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-COPY package.json .
-
-RUN npm install && npm install -g qrcode-terminal pm2
+COPY package*.json ./
+RUN npm install
 
 COPY . .
 
+ENV NODE_ENV=production
+
 EXPOSE 3000
 
-
-CMD ["pm2-runtime", "start", "index.js"]
+CMD ["node", "index.js"]
