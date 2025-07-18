@@ -106027,7 +106027,7 @@ Dont forget to fork 🍴 & star 🌟 repo😇
 </a>
 
 <p><strong>2️⃣ Pair Code (Session ID)</strong></p>
-<a href='https://hanstz-sessions.onrender.com/' target="_blank">
+<a href='https://hanstz-sessions.onrender.com/pair' target="_blank">
   <img alt='Pairing Code' src='https://img.shields.io/badge/Get%20Pairing%20Code-darkpink?style=for-the-badge&logo=opencv&logoColor=black'/>
 </a>
 
