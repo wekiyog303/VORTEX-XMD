@@ -16,7 +16,7 @@ module.exports = {
     // ==============================
     OWNER_NUMBER: process.env.OWNER_NUMBER || "",
     OWNER_NAME: process.env.OWNER_NAME || "HansTech",
-    DEV: process.env.DEV || "255614195217",
+    DEV: process.env.DEV || "255760774888",
 
     // ==============================
     //         ANTI CALL

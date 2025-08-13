@@ -4,12 +4,12 @@
   "description": "A WhatsApp Bot Created By Hans_Tech",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name Vortex-Xmd",
-    "stop": "pm2 stop Vortex-Xmd",
-    "restart": "pm2 restart Vortex-Xmd"
+    "start": "pm2 start index.js --deep-monitoring --attach --name ✅",
+    "stop": "pm2 stop ✅",
+    "restart": "pm2 restart ✅"
   },
   "dependencies": {
-    "@whiskeysockets/baileys": "npm:@fizzxydev/baileys-pro@8.5.12",
+    "@whiskeysockets/baileys": "github:Atlastech45/Baileys",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@dark-yasiya/yt-dl.js": "1.0.5",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
