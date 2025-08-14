@@ -1,163 +1,178 @@
 {
-  "name": "Vortex-X",
-  "description": "Javascript WhatsApp bot made by HansTech",
+  "name": "Vortex-Xmd",
+  "description": "JavaScript WhatsApp bot made by HansTech",
   "logo": "https://files.catbox.moe/neni8p.jpg",
-  "keywords": ["Hans-Xmd"],
+  "keywords": ["Vortex-Xmd"],
   "success_url": "/",
-  "stack": "container",
-"env": {
+  "stack": "heroku-24",
+  "env": {
     "SESSION_ID": {
-      "description": "Put the session-id here.",
+      "description": "Put the session ID here.",
       "required": true,
       "value": ""
-     },  
+    },
     "STICKER_NAME": {
-      "description": "type your sticker pack name.",
+      "description": "Sticker pack name.",
       "required": false,
       "value": "𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃"
-     }, 
+    },
     "PREFIX": {
-    "description": "paste your bot prefix note! Don't apply null prefix.",
+      "description": "Bot command prefix. Do not leave empty or null.",
       "required": false,
       "value": "."
-     },
+    },
+    "ANTI_CALL": {
+      "description": "Reject incoming calls automatically.",
+      "required": false,
+      "value": "false"
+    },
+    "ANTI_CALL_BLOCK": {
+      "description": "Reject and block caller after 5 calls.",
+      "required": false,
+      "value": "false"
+    },
     "MODE": {
-      "description": "select your bot work type public-private-inbox-group.",
+      "description": "Bot operation mode: public, private, group, or inbox.",
       "required": false,
       "value": "public"
-     },
+    },
+    "CHAT_BOT": {
+      "description": "Enable chatbot auto replies (true/false).",
+      "required": false,
+      "value": "false"
+    },
     "ANTI_DELETE": {
-      "description": "set true for show deleted messages.",
+      "description": "Show deleted messages if true.",
       "required": false,
-      "value": "true"  
-     },
+      "value": "true"
+    },
     "ALWAYS_ONLINE": {
-      "description": "Make it true if want always online.",
+      "description": "Always show bot as online.",
       "required": false,
-      "value": "false"  
-    },    
+      "value": "false"
+    },
     "AUTO_REPLY": {
-      "description": "Make it true if you want automatic reply.",
+      "description": "Send automatic replies to chats.",
       "required": false,
       "value": "false"
-    }, 
+    },
     "AUTO_STICKER": {
-      "description": "Make it true if you want automatic sticker.",
+      "description": "Send stickers automatically.",
       "required": false,
       "value": "false"
-    }, 
+    },
     "AUTO_STATUS_SEEN": {
-      "description": "Make it true for automatic status seen.",
+      "description": "Automatically view WhatsApp statuses.",
       "required": true,
       "value": "true"
-    }, 
+    },
     "AUTO_STATUS_REACT": {
-      "description": "make it true for automatic status reaction or like.",
+      "description": "React to status updates automatically.",
       "required": true,
       "value": "false"
-    }, 
+    },
     "AUTO_STATUS_REPLY": {
-      "description": "Make it true for auto reply msg on status seen.",
+      "description": "Reply to statuses automatically.",
       "required": true,
       "value": "false"
-    }, 
+    },
     "AUTO_STATUS_MSG": {
-      "description": "Type custom message on status reply",
+      "description": "Message to send when replying to status.",
       "required": true,
       "value": "*SEEN YOUR STATUS BY 𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃 🖤*"
-    }, 
+    },
     "OWNER_NAME": {
-      "description": "Type Bot Owner Name.",
+      "description": "Bot owner name.",
       "required": false,
       "value": "HansTech"
-    }, 
+    },
     "OWNER_NUMBER": {
-      "description": "put the owner number for bot.",
+      "description": "Owner's WhatsApp number with country code.",
       "required": false,
       "value": "2557607XXXX"
-    }, 
+    },
     "BOT_NAME": {
-      "description": "Type here the bot name.",
+      "description": "Bot name.",
       "required": false,
       "value": "𝐕𝐎𝐑𝐓𝐄𝐗-𝐗𝐌𝐃"
-    }, 
+    },
     "ANTI_LINK": {
-      "description": "Make it true if you want bot auto remove group link.",
+      "description": "Delete group links if found.",
       "required": true,
       "value": "false"
     },
-      "ANTI_LINK_KICK": {
-      "description": "Make it true if you want bot auto remove group link.",
+    "ANTI_LINK_KICK": {
+      "description": "Kick member if group link is detected.",
       "required": true,
       "value": "false"
     },
-     "ANTI_BAD": {
-      "description": "Make it true if you want bot auto delete bad words.",
+    "ANTI_BAD": {
+      "description": "Delete messages with bad words.",
       "required": false,
       "value": "false"
     },
-      "MENTION_REPLY": {
-      "description": "make it true if want mention reply if someone menetion you.",
+    "MENTION_REPLY": {
+      "description": "Auto reply if someone mentions the bot.",
       "required": false,
       "value": "false"
     },
     "MENU_IMAGE_URL": {
-      "description": "add url for mention reply and menu if want.",
+      "description": "Image URL for menu or replies.",
       "required": false,
       "value": "https://files.catbox.moe/di5kdx.jpg"
     },
-      "DESCRIPTION": {
-      "description": "add caption for menu and other",
+    "DESCRIPTION": {
+      "description": "Custom bot description or caption for menu.",
       "required": false,
       "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ HansTz*"
     },
-      "DELETE_LINKS": {
-      "description": "remove links from group automatically without removing member",
+    "DELETE_LINKS": {
+      "description": "Delete links from group without kicking member.",
       "required": false,
       "value": "false"
     },
-      "AUTO_RECORDING": {
-      "description": "Make it true if you want auto recoding.",
+    "AUTO_RECORDING": {
+      "description": "Auto show recording status.",
       "required": false,
       "value": "false"
     },
-      "AUTO_TYPING": {
-      "description": "Make it true if you want auto typing.",
+    "AUTO_TYPING": {
+      "description": "Auto show typing status.",
       "required": false,
       "value": "true"
     },
-      "AUTO_REACT": {
-      "description": "Make it true if you want react on every message.",
+    "AUTO_REACT": {
+      "description": "React to every message.",
       "required": false,
       "value": "false"
     },
-      "CUSTOM_REACT": {
-      "description": "Make it true if you want custom reactions.",
+    "CUSTOM_REACT": {
+      "description": "Enable custom emoji reactions.",
       "required": false,
       "value": "false"
-    }, 
-      "CUSTOM_REACT_EMOJIS": {
-      "description": "put here custom react react emojis.",
+    },
+    "CUSTOM_REACT_EMOJIS": {
+      "description": "Custom emojis for reactions (comma separated).",
       "required": false,
       "value": "💝,💖,💗,❤️‍🩹,❤️,🧡,💛,💚,💙,💜,🤎,🖤,🤍"
-    }, 
-      "ANTI_DEL_PATH": {
-      "description": "change it to -same- if you want to resend deleted message in same chat othwise inbox",
+    },
+    "ANTI_DEL_PATH": {
+      "description": "Where to resend deleted messages: 'same' or 'inbox'.",
       "required": false,
       "value": "some"
-    }, 
-      "ADMIN_EVENTS": {
-      "description": "make it true if want know who promote or demote a member .",
+    },
+    "ADMIN_EVENTS": {
+      "description": "Announce admin promotion/demotion.",
       "required": false,
       "value": "true"
     },
-      "WELCOME": {
-      "description": "make it true if want goodbye and welcome message in groups.",
+    "WELCOME": {
+      "description": "Enable welcome/goodbye messages in groups.",
       "required": false,
       "value": "true"
     },
-      "READ_MESSAGE": {
-      "description": "Make it true if you want bot read your all sms just now.",
+    "READ_MESSAGE": {
+      "description": "Mark messages as read.",
       "required": false,
       "value": "false"
     }
