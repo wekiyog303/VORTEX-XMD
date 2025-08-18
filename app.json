@@ -26,6 +26,11 @@
       "required": false,
       "value": "false"
     },
+    "AUTO_BIO": {
+      "description": "Vortex Bot Bio Running 24/7.",
+      "required": false,
+      "value": "true"
+    },
     "ANTI_CALL_BLOCK": {
       "description": "Reject and block caller after 5 calls.",
       "required": false,

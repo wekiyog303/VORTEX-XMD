@@ -22,7 +22,7 @@ module.exports = {
     //         ANTI CALL
     // ==============================
     ANTI_CALL: process.env.ANTI_CALL || "false", // "true" = Warn only, no block
-    ANTI_CALL_BLOCK: process.env.ANTI_CALL_BLOCK || "true", // "true" = 5 warnings then block
+    ANTI_CALL_BLOCK: process.env.ANTI_CALL_BLOCK || "false", // "true" = 5 warnings then block
     AUTO_BLOCK: process.envAUTO_BLOCK || "false",
     // ==============================
     //            MODE
@@ -30,6 +30,7 @@ module.exports = {
     MODE: process.env.MODE || "public",
     PUBLIC_MODE: process.env.PUBLIC_MODE || "true",
     ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
+    AUTO_BIO: process.env.AUTO_BIO || "true",
 
     // ==============================
     //          CHATBOT
@@ -40,7 +41,7 @@ module.exports = {
     // ==============================
     //          MESSAGES
     // ==============================
-    ANTI_DELETE: process.env.ANTI_DELETE || "true",
+    ANTI_DELETE: process.env.ANTI_DELETE || "false",
     ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "some",
     READ_MESSAGE: process.env.READ_MESSAGE || "false",
     AUTO_REACT: process.env.AUTO_REACT || "false",
@@ -88,7 +89,7 @@ module.exports = {
     // ==============================
     //          PRIVACY
     // ==============================
-    ANTI_VV: process.env.ANTI_VV || "true",
+    ANTI_VV: process.env.ANTI_VV || "false",
 
     // ==============================
     //         STICKER
