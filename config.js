@@ -30,7 +30,7 @@ module.exports = {
     MODE: process.env.MODE || "public",
     PUBLIC_MODE: process.env.PUBLIC_MODE || "true",
     ALWAYS_ONLINE: process.env.ALWAYS_ONLINE || "false",
-    AUTO_BIO: process.env.AUTO_BIO || "true",
+    AUTO_BIO: process.env.AUTO_BIO || "false",
 
     // ==============================
     //          CHATBOT

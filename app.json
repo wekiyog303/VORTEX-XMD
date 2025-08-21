@@ -26,11 +26,6 @@
       "required": false,
       "value": "false"
     },
-    "AUTO_BIO": {
-      "description": "Vortex Bot Bio Running 24/7.",
-      "required": false,
-      "value": "true"
-    },
     "ANTI_CALL_BLOCK": {
       "description": "Reject and block caller after 5 calls.",
       "required": false,
@@ -49,7 +44,7 @@
     "ANTI_DELETE": {
       "description": "Show deleted messages if true.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     "ALWAYS_ONLINE": {
       "description": "Always show bot as online.",
@@ -74,7 +69,7 @@
     "AUTO_STATUS_REACT": {
       "description": "React to status updates automatically.",
       "required": true,
-      "value": "false"
+      "value": "true"
     },
     "AUTO_STATUS_REPLY": {
       "description": "Reply to statuses automatically.",
@@ -89,12 +84,12 @@
     "OWNER_NAME": {
       "description": "Bot owner name.",
       "required": false,
-      "value": "HansTech"
+      "value": "HansTz"
     },
     "OWNER_NUMBER": {
       "description": "Owner's WhatsApp number with country code.",
       "required": false,
-      "value": "2557607XXXX"
+      "value": "2557536684XX"
     },
     "BOT_NAME": {
       "description": "Bot name.",
@@ -129,7 +124,7 @@
     "DESCRIPTION": {
       "description": "Custom bot description or caption for menu.",
       "required": false,
-      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ HansTz*"
+      "value": "*© ᴘᴏᴡᴇʀᴇᴅ ʙʏ Hanstz*"
     },
     "DELETE_LINKS": {
       "description": "Delete links from group without kicking member.",
@@ -169,12 +164,12 @@
     "ADMIN_EVENTS": {
       "description": "Announce admin promotion/demotion.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     "WELCOME": {
       "description": "Enable welcome/goodbye messages in groups.",
       "required": false,
-      "value": "true"
+      "value": "false"
     },
     "READ_MESSAGE": {
       "description": "Mark messages as read.",
