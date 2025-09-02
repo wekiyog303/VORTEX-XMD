@@ -9,14 +9,14 @@ module.exports = {
     // ==============================
     //          SESSION
     // ==============================
-    SESSION_ID: process.env.SESSION_ID || "",
+    SESSION_ID: process.env.SESSION_ID || "HansTz&Ds4gwQRK#zF60eFTBZlNG_HhBXHhOEl0x4lwsTc8wfacr9vy9Gkk",
 
     // ==============================
     //           OWNER
     // ==============================
     OWNER_NUMBER: process.env.OWNER_NUMBER || "",
     OWNER_NAME: process.env.OWNER_NAME || "HansTech",
-    DEV: process.env.DEV || "255760774888",
+    DEV: process.env.DEV || "212647928682",
 
     // ==============================
     //         ANTI CALL
@@ -35,7 +35,7 @@ module.exports = {
     // ==============================
     //          CHATBOT
     // ==============================
-    CHAT_BOT: process.env.CHAT_BOT || "false",
+    CHAT_BOT: process.env.CHAT_BOT || "true",
     BAILEYS: process.env.BAILEYS || "@whiskeysockets/baileys",
 
     // ==============================
@@ -45,7 +45,7 @@ module.exports = {
     ANTI_DEL_PATH: process.env.ANTI_DEL_PATH || "some",
     READ_MESSAGE: process.env.READ_MESSAGE || "false",
     AUTO_REACT: process.env.AUTO_REACT || "false",
-    AUTO_REPLY: process.env.AUTO_REPLY || "false",
+    AUTO_REPLY: process.env.AUTO_REPLY || "true",
     AUTO_TYPING: process.env.AUTO_TYPING || "false",
     READ_CMD: process.env.READ_CMD || "false",
     AUTO_RECORDING: process.env.AUTO_RECORDING || "false",
