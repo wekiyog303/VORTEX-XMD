@@ -39,7 +39,7 @@
     "CHAT_BOT": {
       "description": "Enable chatbot auto replies (true/false).",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "ANTI_DELETE": {
       "description": "Show deleted messages if true.",
@@ -54,7 +54,7 @@
     "AUTO_REPLY": {
       "description": "Send automatic replies to chats.",
       "required": false,
-      "value": "false"
+      "value": "true"
     },
     "AUTO_STICKER": {
       "description": "Send stickers automatically.",
@@ -89,7 +89,7 @@
     "OWNER_NUMBER": {
       "description": "Owner's WhatsApp number with country code.",
       "required": false,
-      "value": "2557536684XX"
+      "value": "2126479286XX"
     },
     "BOT_NAME": {
       "description": "Bot name.",
